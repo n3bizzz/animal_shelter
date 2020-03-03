@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Найти друга</title>
+</head>
+<body>
+     <form name="search" action="#" method="post"> <!--форма-->
+         <p>Заполните форму ниже и мы подберем Вам питомца</p>
+         <fieldset> <!-- групировка элементов формы, необязательно, используется только в форме-->
+            <legend>Кого вы ищете?</legend> <!--название для fieldset только для него -->
+             <label for="category">Пожелания</label> <!--текстовая метка для элемента-->
+            <select id="category"  name="category" size="2"> <!-- выпадающий список name для яваскрипта и сервера, для множественного выбора атр maultiple-->
+                <option value="cat">Кошка</option> <!-- элемент выпадающего списка только с select. value для сервера , всегда пользовательский выбор -->
+                <option value="dog">Собака</option>
+            </select>
+         </fieldset>
+         <fieldset disabled> <!-- атр disable можно отключить любой элемент для редактирования, открывать будет яваскрипт-->
+             <legend>Размер будущего питомца</legend>
+             <label>
+                 <input type="checkbox" name="size[]" value="small"> <!--форма ввода выбора--, при множественном выборе нужны [] -->
+                 Маленькие
+             </label>
+             <label>
+                 <input type="checkbox" name="size[]" value="middle"> <!--форма ввода выбора-->
+                 Средние
+             </label>
+             <label>
+                 <input type="checkbox" name="size[]" value="big"> <!--форма ввода выбора-->
+                 Большие
+             </label>
+             <label>
+                 <input checked type="checkbox" name="size[]" value="dontmatter"> <!--checked выбра по умолчанию-->
+                 Не имеет значения
+             </label>
+         </fieldset>
+         <fieldset>
+             <legend>Пол будущего питомца</legend>
+             <label>
+                 Мальчик
+                 <input type="radio" name="gender" value="male">
+             </label>
+             <label>
+                 Девочка
+                 <input type="radio" name="gender" value="female">
+             </label>
+             <label>
+                 Не имеет значения
+                 <input checked type="radio" name="gender" value="any">
+             </label>
+         </fieldset>
+         <fieldset>
+             <legend>Цвет будущего питомца</legend>
+             <label>
+                 <input type="checkbox" name="color[]" value="white">
+                  Беллый
+             </label>
+             <label>
+                 <input type="checkbox" name="color[]" value="grey">
+                 Серый
+             </label>
+             <label>
+                 <input type="checkbox" name="color[]" value="black">
+                 Черный
+             </label>
+             <label>
+                 <input checked type="checkbox" name="color[]" value="any">
+                 Не имеет значения
+             </label>
+         </fieldset>
+         <input type="submit" value="Подобрать питомца"> <!-- отправка данных на сервер ;-->
+         <input type="reset" value="очистить форму"> <!--отчистка формы-->
+         <input type="button" value="Просто кнопка"> <!-- для яваскрипта-->
+         <!--<button></button> кнопка-->
+     </form>
+</body>
+</html>
