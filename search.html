@@ -12,7 +12,7 @@
              <label for="category">Пожелания</label> <!--текстовая метка для элемента-->
             <select id="category"  name="category" size="2"> <!-- выпадающий список name для яваскрипта и сервера, для множественного выбора атр maultiple-->
                 <option value="cat">Кошка</option> <!-- элемент выпадающего списка только с select. value для сервера , всегда пользовательский выбор -->
-                <option value="dog">Собака</option>
+                <option selected value="dog">Собака</option> <!--selected выбор по умолчанию в выпадающем спсике-->
             </select>
          </fieldset>
          <fieldset disabled> <!-- атр disable можно отключить любой элемент для редактирования, открывать будет яваскрипт-->
@@ -69,7 +69,7 @@
              </label>
          </fieldset>
          <input type="submit" value="Подобрать питомца"> <!-- отправка данных на сервер ;-->
-         <input type="reset" value="очистить форму"> <!--отчистка формы-->
+         <input type="reset" value="Очистить форму"> <!--отчистка формы-->
          <input type="button" value="Просто кнопка"> <!-- для яваскрипта-->
          <!--<button></button> кнопка-->
      </form>
