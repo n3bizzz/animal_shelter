@@ -9,7 +9,6 @@
     <meta name="author" content="bizz">
     <title>Главная</title>
   </head>
-
   <body>
      <header><!--  навигация, вход , логотипы, поиск и т.д. (шапка), симантический тег-->
         <nav><!--навигация , может быть где угодно, где нужна-->
@@ -53,7 +52,24 @@
                 <a href="#">Информация</a>
             </nav>
         </section>
-        <section>Написать нам</section>
+        <section>
+            Написать нам
+            <form name="search" action="#" method="post">
+                <div>
+                    <label for="email">Введите ваш e-mail алрес</label>
+                    <input id="email" type="email" name="email" placeholder="реальный e-mail адрес" required>
+                </div>
+                <div>
+                    <label for="name">Введите имя пользователя</label>
+                    <input minlength="3" ma4xlength="12" id="name" type="text" name="name" placeholder="от 3 до 12 символов" autofocus required>
+                </div>
+                <div>
+                    <label for="story">Текст статьи</label>
+                    <textarea id="story" minlength="20" name="description" placeholder="минимум 20 символов" required></textarea>
+                </div>
+                <input type="submit" value="Написать нам">
+            </form>
+        </section>
         <section>
             <h5>Помощь</h5>
         </section>
