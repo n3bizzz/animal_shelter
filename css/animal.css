@@ -6,7 +6,7 @@
 }
 
 /*селектор потомка, (один элемент внутри другого)*/
-.animal-photo q {
+.animal-photo q { /*браузер сначало ищет потомка (q)*/
     position: absolute;
     top: 20px;
     left: 20px;
@@ -18,3 +18,7 @@
     color: whitesmoke;
     border-radius: 10px;
 }
+
+a [href] span{} /*все эл-ты span в теге a c атрибутом href/
+a .red{} /*все эл-ты класа .red в теге a*/
+a.green{} /*все э-ты a c классом .green */
