@@ -1,0 +1,10 @@
+fieldset {
+    border: 1px solid orangered; /*рамка, ширина, тип рамки, цвет*/
+}
+
+input[type="submit"] {
+    border: 0; /*убрать рамку*/
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: orangered;
+} /*селектор к атрибутам, можно без значения атрибута */

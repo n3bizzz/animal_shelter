@@ -1,2 +1,20 @@
-@import "style.css"; /* одключение одного css в другой; в самом вверху */ /*Уникальный стиль для animals.html*/
-/*селектор тега*/
+@import "style.css"; /* подключение одного css в другой; в самом вверху */ /*Уникальный стиль для animals.html*/
+.animal-photo {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/*селектор потомка, (один элемент внутри другого)*/
+.animal-photo q {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: whitesmoke;
+}
+.take-home {
+    padding: 10px 60px; /*раздвигаем рамки от текста ссылки, вверхниз, левоправо*/
+    background: orangered;
+    color: whitesmoke;
+    border-radius: 10px;
+}
