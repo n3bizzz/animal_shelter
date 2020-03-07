@@ -1,0 +1,54 @@
+@import "style.css";
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header_area header_area header_area" /* 1строчка  занимает 3 столбца , название придумываем сами*/
+        "asideleft_area main_area asideright_area" /*2 строчка занимает 3 столбца*/
+        "footer_area footer_area footer_area"; /* 3 строчка занимает 3 столбца*/
+
+    /*определяем колонки сетки*/
+    grid-template-columns: 1fr minmax(500px,1000px) 1fr; /*средняя колонка от 500пкс до 1000пкс, колнки по бокам занаимет оставшее пространство попалам*/
+    /*определяем ряды сетки*/
+    grid-template-rows: auto auto auto; /*размер строк определяется содержимым , можно % или px*/
+}
+
+
+/*привязка эд-в к сетке*/
+header {
+    grid-area: header_area;
+}
+aside.left {
+    grid-area: asideleft_area;
+}
+#asideright {
+    grid-area: asideright_area;
+}
+main {
+    grid-area: main_area;
+}
+footer {
+    grid-area: footer_area;
+}
+
+/*компановка отдельного эл-та gallery*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*1fr 1fr 1fr 1fr*/
+    gap: 10px;
+}
+.gallery img {
+    opacity: 0.6;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.gallery img:hover { /*hover - при наведении мышкой*/
+    opacity: 1;
+}
+.gallery-big {
+    grid-column: 1 / 5;
+    opacity: 1 !important; /*из-за специфичности .gallery img имеет больший приоретет , !important меняет приоретет на максимальну у параметра лучше не применять*/
+}
+/*лучше так .gallery img.gallery-big*/
+
