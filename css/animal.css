@@ -1,4 +1,5 @@
 @import "style.css"; /* подключение одного css в другой; в самом вверху */ /*Уникальный стиль для animals.html*/
+@import "flex.css";
 .animal-photo {
     position: relative;
     top: 0;
@@ -17,6 +18,7 @@
     background: orangered;
     color: whitesmoke;
     border-radius: 10px;
+    margin-left: auto; /*выравнивание по праваму краю, если является эт-м flex блока*/
 }
 
 a [href] span{} /*все эл-ты span в теге a c атрибутом href/

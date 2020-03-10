@@ -12,14 +12,14 @@
   </head>
   <body>
      <header><!--  навигация, вход , логотипы, поиск и т.д. (шапка), симантический тег-->
-        <nav><!--навигация , может быть где угодно, где нужна-->
-            <ul><!--маркированный список-->
-                <li><!--элемент списка-->
+        <nav class="container"><!--навигация , может быть где угодно, где нужна-->
+            <ul class="flex-row menu"><!--маркированный список-->
+                <li class="flex-2 content-center"><!--элемент списка-->
                     <a href="main.html"><!--cсылка-->Главная</a>
                 </li>
-                <li>
-                    Животные
-                    <ul><!--submenu выпадающий список-->
+                <li class="flex-2 content-center">
+                    <a href="#">Животные</a>
+                    <ul class="submenu"><!--submenu выпадающий список-->
                         <li>
                             <a href="animals.html">Кошки</a>
                         </li>
@@ -28,11 +28,17 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="flex-2 content-center">
+                    <a href="#">Статьи</a>
+                </li>
+                <li class="flex-2 content-center">
                     <a href="search.html">Найти друга</a>
                 </li>
-                <li>
+                <li class="flex-2 content-center">
                     <a href="contacts.html">Контакты</a>
+                </li>
+                <li class="flex-2 content-center">
+                    <a href="auth.html">Войти</a>
                 </li>
             </ul>
         </nav>
@@ -42,6 +48,30 @@
          </div>
      </header>
     <main class="container"><!--основное содержиоме, должно быть обязательно-->
+        <section class="top-animals">
+            <h1>Наши питомцы</h1>
+            <div class="flex-row wrap">
+                <div class="flex-row wrap">
+                    <div class="flex-6">
+                        <a href=""><img src="https://picsum.photos/700"></a>
+                    </div>
+                    <div class="flex-6 flex-row wrap">
+                        <div class="flex-6"><a href=""><img src="https://picsum.photos/700"></a></div>
+                        <div class="flex-6"><a href=""><img src="https://picsum.photos/700"></a></div>
+                        <div class="flex-6"><a href=""><img src="https://picsum.photos/700"></a></div>
+                        <div class="flex-6"><a href=""><img src="https://picsum.photos/700"></a></div>
+                    </div>
+                </div>
+
+                <div class="flex-4"><a href=""><img src="https://picsum.photos/700"></a></div> <!--flex-4 (1-12 в зависимоти от размера э-та)исходя что всего 12 частей, стандарт но не обязательно так-->
+                <div class="flex-4"><a href=""><img src="https://picsum.photos/700"></a></div>
+                <div class="flex-4"><a href=""><img src="https://picsum.photos/700"></a></div>
+                <div class="flex-4"><a href=""><img src="https://picsum.photos/700"></a></div>
+                <div class="flex-4"><a href=""><img src="https://picsum.photos/700"></a></div>
+                <div class="flex-4"><a href=""><img src="https://picsum.photos/700"></a></div>
+            </div>
+
+        </section>
         <section class="top-articles">
             <h1>Новые статьи</h1>
             <div class="top-articles-grid">
