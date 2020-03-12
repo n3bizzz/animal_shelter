@@ -4,6 +4,7 @@
     position: relative;
     top: 0;
     left: 0;
+    opacity: 0.6;
 }
 
 /*селектор потомка, (один элемент внутри другого)*/
@@ -12,7 +13,14 @@
     top: 20px;
     left: 20px;
     color: whitesmoke;
+    font-size: xx-large;
+    opacity: 0;
 }
+.animal-photo:hover q,
+.animal-photo:hover {
+    opacity: 1;
+} /*наведение курсора на элемент с классом*/
+
 .take-home {
     padding: 10px 60px; /*раздвигаем рамки от текста ссылки, вверхниз, левоправо*/
     background: orangered;

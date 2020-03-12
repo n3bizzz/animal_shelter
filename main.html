@@ -13,12 +13,12 @@
   <body>
      <header><!--  навигация, вход , логотипы, поиск и т.д. (шапка), симантический тег-->
         <nav class="container"><!--навигация , может быть где угодно, где нужна-->
-            <ul class="flex-row menu"><!--маркированный список-->
-                <li class="flex-2 content-center"><!--элемент списка-->
+            <ul class="flex-row  space-around menu"><!--маркированный список-->
+                <li class="content-center"><!--элемент списка-->
                     <a href="main.html"><!--cсылка-->Главная</a>
                 </li>
-                <li class="flex-2 content-center">
-                    <a href="#">Животные</a>
+                <li class="content-center">
+                    <a href="animals.html">Животные</a>
                     <ul class="submenu"><!--submenu выпадающий список-->
                         <li>
                             <a href="animals.html">Кошки</a>
@@ -28,17 +28,17 @@
                         </li>
                     </ul>
                 </li>
-                <li class="flex-2 content-center">
+                <li class="content-center">
                     <a href="#">Статьи</a>
                 </li>
-                <li class="flex-2 content-center">
+                <li class="content-center">
                     <a href="search.html">Найти друга</a>
                 </li>
-                <li class="flex-2 content-center">
+                <li class=" content-center">
                     <a href="contacts.html">Контакты</a>
                 </li>
-                <li class="flex-2 content-center">
-                    <a href="auth.html">Войти</a>
+                <li class="content-center">
+                    <a href="#auth">Войти</a> <!--переходи к элементу с id="auth" (внизу этой страницы сейчас)-->
                 </li>
             </ul>
         </nav>
@@ -166,45 +166,45 @@
             </div>
         </section>
     </main>
-    <footer><!--подвал-->
+    <footer class="flex-row content-center space-around"><!--подвал-->
         <section>
             <h5><!--теги заголовка h1-6-->О нас</h5>
-            <nav>
+            <nav class="flex-column" ;>
                 <a href="#">Правила сайта</a>
                 <a href="#">Вакансии</a>
                 <a href="#">Информация</a>
             </nav>
         </section>
         <section>
-            Написать нам
-            <form name="search" action="#" method="post">
-                <div>
-                    <label for="email">Введите ваш e-mail алрес</label>
-                    <input id="email" type="email" name="email" placeholder="реальный e-mail адрес" required>
-                </div>
-                <div>
-                    <label for="name">Введите имя пользователя</label>
-                    <input minlength="3" ma4xlength="12" id="name" type="text" name="name" placeholder="от 3 до 12 символов" autofocus required>
-                </div>
-                <div>
-                    <label for="story">Текст статьи</label>
-                    <textarea id="story" minlength="20" name="description" placeholder="минимум 20 символов" required></textarea>
-                </div>
+            <h5>Написать нам</h5>
+            <form class="flex-column" name="search" action="#" method="post">
+                <input id="email" type="email" name="email" placeholder="реальный e-mail адрес" required>
+                <input minlength="3" ma4xlength="12" id="name" type="text" name="name" placeholder="от 3 до 12 символов" autofocus required>
+                <textarea id="story" minlength="20" name="description" placeholder="минимум 20 символов" required></textarea>
                 <input type="submit" value="Написать нам">
             </form>
         </section>
-        <section>
+        <section class="flex-column">
             <h5>Помощь</h5>
         </section>
         <section>
             <h5>Соц. Сети</h5>
-            <nav>
+            <nav class="flex-column">
                 <a href="#">Instagram</a>
                 <a href="#">Fb</a>
                 <a href="#">TW</a>
             </nav>
         </section>
     </footer>
+  <section class="modal" id="auth"> <!--вылезающие окно авторизации на мейни по кнопке войти в верхнем меню -->
+      <form class="flex-column" name="auth" action="#" method="post">
+          <input type="email" name="email" placeholder="email">
+          <input type="password" name="password" placeholder="пароль">
+          <input type="submit" value="Войти">
+      </form>
+      <a class="close-modal" href="#0">X</a>
+  </section>
+
   </body>
 </html>
 

@@ -8,3 +8,46 @@ input[type="submit"] {
     border-radius: 5px;
     background: orangered;
 } /*селектор к атрибутам, можно без значения атрибута */
+
+/*input:focus - именно ипут с фокусом*/
+form :focus { /*любой э-т в форме с фокусом*/
+    outline: none; /*уберает рамку которая активируется при выборе эл-та*/
+    border-color: lightblue;
+}
+
+
+/*html валидация*/
+ textarea:valid,
+ input:in-range, /*числа в диапозоне*/
+ input[type="text"]:valid
+ {
+     border: 1px solid green;
+ }
+
+ textarea:invalid,
+ input:out-of-range,
+ input[type="text"]:invalid
+ {
+     border: 1px solid red;
+ }
+
+
+ /*про required*/
+form :required + span:before /* +  -селектор соседнего эл-та*/
+{
+    content: "\2718";
+    font-weight: bolder;
+    color: red;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+form :required:focus:valid + span:before,
+form :required:not(:focus):valid + span:before
+{
+    content: "\2714";
+    font-weight: bolder;
+    color: green;
+    margin-left: 10px;
+    font-size: 15px;
+}

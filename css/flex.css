@@ -21,3 +21,13 @@
 .flex-2 {
     flex: 16.66%;
 }
+
+.space-around {
+    justify-content: space-around;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+
+}
+/*если flex без сетки, что  бы после выравнивания нее ыбло пустот между кнопками , каждому flex эл-ту надо назначить flex-grow: >0*/

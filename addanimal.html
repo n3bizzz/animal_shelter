@@ -3,72 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>Добавление животного</title>
+    <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
     <form enctype="multipart/form-data" name="add_animal" action="#" method="post"> <!--атр enctype если нужно загружать файлы-->
         <p>Форма добавления животного</p>
         <div>
             <label for="name">Имя животного</label>
-            <input minlength="2" maxlength="10" id="name" type="text" name="animal_name" placeholder="имя">
+            <input minlength="2" maxlength="10" id="name" type="text" name="animal_name" placeholder="имя" required>
+            <span></span>
             <!--ввод текста; атр: нужно от 2х 10 символов,
             required не отправиться пока пустое поле; placeholder подсказазка; value="" автомат заполнение указаной инфы до ввода-->
         </div>
         <div>
             <label for="age">Возраст</label>
-            <input id="age" type="number" min="0" max="30" name="age"> <!--числовыой выбор-->
+            <input id="age" type="number" min="0" max="30" name="age" value="0" required> <!--числовыой выбор-->
+            <span></span> <!--сюда или ошибка или успешщно, будет выводиться-->
         </div>
         <div>
             <label for="description">Описание животного</label>
-            <textarea id="description" minlength="20" name="description"></textarea> <!-- ввод текста-->
+            <textarea id="description" minlength="20" name="description" required></textarea> <!-- ввод текста-->
+            <span></span>
         </div>
         <div>
             <label for="photo">Фотографии животного</label>
-            <input id="photo" multiple type="file" accept="image/*" name="photo[]">
+            <input id="photo" multiple type="file" accept="image/*" name="photo[]" required>
             <!--загрукза файла, если несколько то атр multiple и в name []; ограничение по типу файлов accept=""-->
+            <span></span>
         </div>
         <div>
             <label for="birth">Дата рождения</label>
             <input id="birth" type="date" name="date"> <!--ввод даты, в хтмл не использовать, только через яваскрипт -->
+            <span></span>
         </div>
         <div>
             <label for="category">Категория животного</label>
-            <select required id="category"  name="category" size="2">
+            <select required id="category"  name="category">
                 <option value="cat">Кошка</option>
                 <option value="dog">Собака</option>
             </select>
+            <span></span> <!--сюда или ошибка или успешщно, будет выводиться-->
         </div>
         <div>
             <legend>Пол животного</legend>
             <label>
-                <input type="radio" name="gender" value="male">
                 Мужской
+                <input required type="radio" name="gender" value="male">
             </label>
             <label>
-                <input type="radio" name="gender" value="female">
                 Женский
-        </div>
-        <div>
-            <label>Размер</label>
+                <input required type="radio" name="gender" value="female">
+                <span></span>
+            </label>
         </div>
         <div>
             <legend>Цвет животного</legend>
             <label>
-                <input type="radio" name="color" value="white">
                 Белый
+                <input required type="radio" name="color" value="white">
             </label>
             <label>
-                <input type="radio" name="color" value="grey">
                 Серый
+                <input required type="radio" name="color" value="grey">
             </label>
             <label>
-                <input type="radio" name="color" value="black">
                 Черный
+                <input required type="radio" name="color" value="black">
+                <span></span>
             </label>
         </div>
-        <div>
-            <label>
-
-            </label>
+        <input type="submit" value="Добавить ">
         </div>
     </form>
 </body>
