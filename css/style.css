@@ -4,6 +4,9 @@
     box-sizing: border-box; /*border+padding Без margin , тогда будет попадать в 33% указаный для flex*/
     /*для margiт во flex, что бы не зарьезжалось по сетке,  нужно сделать еще один вложенны контейнер */
 } /*применется ко всему*/
+html { scroll-behavior: smooth;
+
+}
 body {
     /*свойство: значение*/
     background: whitesmoke; /*цвет фона*/
@@ -92,6 +95,8 @@ form input {
     left: 50%;
     background: #b19891;
     padding: 30px;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
 }
 .modal:target { /*стиль применится когда перешли к э-ту через ссылку привязанную к id*/
     top: 50%;
@@ -104,4 +109,33 @@ form input {
     position: absolute;
     top: 10px;
     right: 10px;
+}
+
+footer .social a{
+    height:  98px;
+    width: 98px;
+    display: inline-block;
+    background: url(../img/sprites.png);
+    background-repeat: no-repeat;
+}
+
+ footer a.facebook{
+     background-position: 0 -100px;
+     transform: scale(0.5,0.5);
+ }
+ footer a.twitter{
+     background-position: -100px 0;
+     transform: scale(0.5,0.5);
+ }
+footer a.youtube{
+    background-position: -200px -100px;
+    transform: scale(0.5,0.5);
+}
+footer a.instagram {
+    background-position: -300px 0;
+    transform: scale(0.5,0.5);
+}
+footer a.google {
+    background-position: -600px -100px;
+    transform: scale(0.5,0.5); /*уменьшение размера иконки , при спрайтах, не через ширину высоту*/
 }

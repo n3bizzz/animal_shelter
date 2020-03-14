@@ -5,10 +5,19 @@
     width: 100%;
     height: 100%;
 }  /*будет искажаться, прямоугольник нельзя в квадрат, как и наоборот*/
+.top-animals img {
+    transition: all 1s;
+}
 
+.top-animals img:hover {
+    transform: scale(1.1);
+}
 .top-animals div{ /*для всех div  внутри, там где вложенные рамка будет толще (суммироваться)*/
     border: 1px solid #b19891; /*теперь из-за рамки не помещается в 33% указанные селкторе flex*/
+    overflow: hidden; /*скрыть то что не умещается в контейннер, должна быть ширина контейнера*/
 }
+
+
 .top-articles-grid img {
     opacity: 0.5;
 }

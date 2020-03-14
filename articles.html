@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<!--элементы страницы-->
+<head>
+    <!--служебные тэги-->
+    <meta charset="utf-8">  <!--обязательно должна быть-->
+    <meta name="description" content="приют для животных">
+    <meta name="keywords" content="animals, cats, dogs">
+    <meta name="author" content="bizz">
+    <link rel="stylesheet" href="css/flex2.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <title>Главная</title>
+</head>
+<body>
+<header><!--  навигация, вход , логотипы, поиск и т.д. (шапка), симантический тег-->
+    <nav class="container"><!--навигация , может быть где угодно, где нужна-->
+        <ul class="flex-row  space-around menu"><!--маркированный список-->
+            <li class="content-center"><!--элемент списка-->
+                <a href="main.html"><!--cсылка-->Главная</a>
+            </li>
+            <li class="content-center">
+                <a href="animals.html">Животные</a>
+                <ul class="submenu"><!--submenu выпадающий список-->
+                    <li>
+                        <a href="animals.html">Кошки</a>
+                    </li>
+                    <li>
+                        <a href="#">Собаки</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="content-center">
+                <a href="#">Статьи</a>
+            </li>
+            <li class="content-center">
+                <a href="search.html">Найти друга</a>
+            </li>
+            <li class=" content-center">
+                <a href="contacts.html">Контакты</a>
+            </li>
+            <li class="content-center">
+                <a href="#auth">Войти</a> <!--переходи к элементу с id="auth" (внизу этой страницы сейчас)-->
+            </li>
+        </ul>
+    </nav>
+    <div><!--контейнер не симмантический (просто для группировки)-->
+        <p><!--текстовый абзац-->Найти друга</p>
+        <p>+7(999)9999999</p>
+    </div>
+</header>
+<main class="container content-center"><!--основное содержиоме, должно быть обязательно-->
+    <div class="flex-column">
+        <div class="flex-row">
+            <div class="flex-1"><img src="img/lusya.jpg"></div>
+            <div class="flex-2">
+                <h1>Заголовок</h1>
+                <p>
+                    orem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                </p>
+            </div>
+        </div>
+        <div class="flex-row-reverse">
+            <div class="flex-1"><img src="img/lusya.jpg"></div>
+            <div class="flex-2">
+                <h1>Заголовок</h1>
+                <p>
+                    orem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                </p>
+            </div>
+        </div>
+        <div class="flex-column">
+            <div><img class="mini" src="img/lusya.jpg"></div>
+            <div>
+                <h1>Заголовок</h1>
+                <p>
+                    orem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                </p>
+            </div>
+        </div>
+        <div class="flex-row circle">
+            <div class="flex-1">
+                <img src="img/lusya.jpg">
+                <h1>Заголовок</h1>
+                <p>
+                    orem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                </p>
+            </div>
+            <div class="flex-1">
+                <img src="img/lusya.jpg">
+                <h1>Заголовок</h1>
+                <p>
+                    orem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                </p>
+            </div>
+            <div class="flex-1">
+                <img src="img/lusya.jpg">
+                <h1>Заголовок</h1>
+                <p>
+                    orem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Culpa iusto nihil praesentium quos vitae voluptates.
+                </p>
+            </div>
+        </div>
+    </div>
+    <section class="top-articles">
+        <article>
+            <h2> lorem ipsum</h2>
+            <p>orem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.</p>
+        </article>
+        <article>
+            <h2> lorem ipsum</h2>
+            <p>orem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.</p>
+        </article>
+        <article>
+            <h2> lorem ipsum</h2>
+            <p>orem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.</p>
+        </article>
+        <article>
+            <h2> lorem ipsum</h2>
+            <p>orem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.</p>
+        </article>
+        <article>
+            <h2> lorem ipsum</h2>
+            <p>orem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.</p>
+        </article>
+        <article>
+            <h2> lorem ipsum</h2>
+            <p>orem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.</p>
+        </article>
+        <article>
+            <h2> lorem ipsum</h2>
+            <p>orem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Culpa iusto nihil praesentium quos vitae voluptates.</p>
+        </article>
+    </section>
+</main>
+
+</body>
+</html>
+
